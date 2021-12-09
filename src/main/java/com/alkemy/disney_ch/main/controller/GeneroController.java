@@ -18,7 +18,7 @@ public class GeneroController {
     @Autowired
     private GeneroService genService;
     
-    @PostMapping("")
+    @PostMapping
     public ResponseEntity<GeneroDTO> save(@RequestBody GeneroDTO genero){
         
         GeneroDTO generoSaved = genService.save(genero);
