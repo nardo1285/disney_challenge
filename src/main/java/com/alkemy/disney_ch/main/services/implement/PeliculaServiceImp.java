@@ -1,6 +1,8 @@
 
 package com.alkemy.disney_ch.main.services.implement;
 
-public class PeliculaServiceImp {
+import com.alkemy.disney_ch.main.services.PeliculaService;
+
+public class PeliculaServiceImp implements PeliculaService{
     
 }

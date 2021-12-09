@@ -1,6 +1,8 @@
 
 package com.alkemy.disney_ch.main.services.implement;
 
-public class PersonajeServiceImp {
+import com.alkemy.disney_ch.main.services.PersonajeService;
+
+public class PersonajeServiceImp implements PersonajeService{
     
 }
