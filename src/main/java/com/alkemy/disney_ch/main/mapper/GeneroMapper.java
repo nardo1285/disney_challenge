@@ -3,6 +3,8 @@ package com.alkemy.disney_ch.main.mapper;
 
 import com.alkemy.disney_ch.main.dto.GeneroDTO;
 import com.alkemy.disney_ch.main.entity.GeneroEntity;
+import java.util.ArrayList;
+import java.util.List;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -28,6 +30,16 @@ public class GeneroMapper {
         dto.setNombre(entity.getNombre());
         
         return dto;
+    }
+    
+    public List<GeneroDTO> GeneroEntityList2DTOList(List<GeneroEntity> entities){
+        
+        List<GeneroDTO> dtos = new ArrayList<>();
+        
+        for (GeneroEntity entity : entities) {
+            dtos.add(this.GeneroEntity2DTO(entity));
+        }
+        return dtos;
     }
     
 }

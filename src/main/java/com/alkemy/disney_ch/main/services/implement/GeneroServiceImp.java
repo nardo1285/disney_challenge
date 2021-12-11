@@ -6,6 +6,7 @@ import com.alkemy.disney_ch.main.entity.GeneroEntity;
 import com.alkemy.disney_ch.main.mapper.GeneroMapper;
 import com.alkemy.disney_ch.main.repository.GeneroRepository;
 import com.alkemy.disney_ch.main.services.GeneroService;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,9 +22,19 @@ public class GeneroServiceImp implements GeneroService{
         
         GeneroEntity entity = generoMapper.GeneroDTO2Entity(dto);
         GeneroEntity entitySaved = generoRepo.save(entity);
+        GeneroDTO result = generoMapper.GeneroEntity2DTO(entitySaved);
         //Esto lo tenemos que convertir en DTO, ya que es lo que maneja el Controller
         System.out.println("Guardar Género");
         
-        return dto;
+        return result;
+    }
+
+    
+    public List<GeneroDTO> getAllGeneros() {
+        List<GeneroEntity> entities = generoRepo.findAll();
+        List<GeneroDTO> result = generoMapper.GeneroEntityList2DTOList(entities);
+        
+        return result;
+        
     }
 }
