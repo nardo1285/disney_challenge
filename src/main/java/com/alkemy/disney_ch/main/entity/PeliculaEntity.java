@@ -1,4 +1,4 @@
-
+    
 package com.alkemy.disney_ch.main.entity;
 
 import java.time.LocalDate;
@@ -32,8 +32,8 @@ public class PeliculaEntity {
     @JoinColumn(name = "genero_id", insertable = false, updatable = false) 
     private GeneroEntity genero;
     
-    @Column(name = "genero_id", nullable = false)
-    private Long generoId;
+//    @Column(name = "genero_id", nullable = false)
+//    private Long generoId;
     
     @ManyToMany(mappedBy = "pelicula", cascade = CascadeType.ALL)
     private List<PersonajeEntity> personaje = new ArrayList<>();
