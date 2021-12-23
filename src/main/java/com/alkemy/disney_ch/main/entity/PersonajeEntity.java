@@ -17,7 +17,7 @@ public class PersonajeEntity {
     
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private String id;
+    private Long id;
     
     private String imagen;
     private String nombre;

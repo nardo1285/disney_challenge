@@ -2,7 +2,7 @@
 package com.alkemy.disney_ch.main.controller;
 
 import com.alkemy.disney_ch.main.dto.PersonajeDTO;
-import com.alkemy.disney_ch.main.services.implement.PersonajeServiceImp;
+import com.alkemy.disney_ch.main.services.PersonajeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class PersonajeController {
     
     @Autowired
-    private PersonajeServiceImp persoService;
+    private PersonajeService persoService;
     
     @PostMapping
     public ResponseEntity<PersonajeDTO> save(@RequestBody PersonajeDTO personaje){
