@@ -19,6 +19,6 @@ public class PeliculaDTO {
     private LocalDate fechaCreacion;
     private Integer calificacion;
    // private GeneroEntity genero;
-    //private Long genero_id;
+   // private Long genero_id;
     
 }
