@@ -37,4 +37,8 @@ public class GeneroServiceImp implements GeneroService{
         return result;
         
     }
+    
+    public void delete(Long id){
+        this.generoRepo.deleteById(id);
+    }
 }

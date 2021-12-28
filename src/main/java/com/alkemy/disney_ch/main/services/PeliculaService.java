@@ -10,4 +10,6 @@ public interface PeliculaService {
     
     List<PeliculaDTO> getAllPelicula();
     
+    void delete(Long id);
+    
 }

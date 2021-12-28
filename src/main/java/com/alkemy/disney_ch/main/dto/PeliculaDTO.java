@@ -2,6 +2,7 @@
 package com.alkemy.disney_ch.main.dto;
 
 //import com.alkemy.disney_ch.main.entity.GeneroEntity;
+import com.alkemy.disney_ch.main.entity.GeneroEntity;
 import java.time.LocalDate;
 import lombok.Getter;
 import lombok.Setter;
@@ -18,7 +19,7 @@ public class PeliculaDTO {
     @DateTimeFormat(pattern = "yyyy/MM/dd")
     private LocalDate fechaCreacion;
     private Integer calificacion;
-   // private GeneroEntity genero;
+    private GeneroEntity genero;
    // private Long genero_id;
     
 }

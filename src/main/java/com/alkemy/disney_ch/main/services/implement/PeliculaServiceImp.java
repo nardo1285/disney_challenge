@@ -33,8 +33,16 @@ public class PeliculaServiceImp implements PeliculaService{
     
     public List<PeliculaDTO> getAllPelicula() {
         
-        throw new UnsupportedOperationException("Not supported yet."); 
-        //To change body of generated methods, choose Tools | Templates.
+        List<PeliculaEntity> entities = peliculaRepository.findAll();
+        List<PeliculaDTO> result = peliculaMapper.PeliculaEntityList2DTOList(entities);
+        
+        return result;
+        
+    }
+    
+    
+    public void delete(Long id){
+        this.peliculaRepository.deleteById(id);
     }
     
 }
